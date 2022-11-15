@@ -1,73 +1,71 @@
 // const cypressConfig = require('../../../cypress.config');
 // const navText = cypressConfig.e2e.env.navbarText
 
-const token = 'abc123'
+// const token = 'abc123'
 
 context('My First Test', () => {
-
   beforeEach(() => {
     cy.visit('/commands/actions')
-    
-  })  
+  })
 
-//   it('triggers a popover on click', () => {
-//     cy.get('.action-btn').click()
-//     cy.findByText('This popover shows up on click').should('be.visible')
-//   })
+  //   it('triggers a popover on click', () => {
+  //     cy.get('.action-btn').click()
+  //     cy.findByText('This popover shows up on click').should('be.visible')
+  //   })
 
-//   it('can click  different section of canvas', () => {
-//     cy.get('#action-canvas').click('top')
-//     cy.get('#action-canvas').click('bottomRight')
-//     cy.get('#action-canvas').click(80, 100)
-//   })
+  //   it('can click  different section of canvas', () => {
+  //     cy.get('#action-canvas').click('top')
+  //     cy.get('#action-canvas').click('bottomRight')
+  //     cy.get('#action-canvas').click(80, 100)
+  //   })
 
-//   it('can double click to edit', () => {
-//     cy.get('.action-div').dblclick().should('not.be.visible')
-//     cy.get('.action-input-hidden').should('be.visible')
-//   })
+  //   it('can double click to edit', () => {
+  //     cy.get('.action-div').dblclick().should('not.be.visible')
+  //     cy.get('.action-input-hidden').should('be.visible')
+  //   })
 
-//   it('right click to edit', () => {
-//     cy.get('.rightclick-action-div').rightclick().should('not.be.visible')
-//     cy.get('.rightclick-action-input-hidden').should('be.visible')
-//   })
+  //   it('right click to edit', () => {
+  //     cy.get('.rightclick-action-div').rightclick().should('not.be.visible')
+  //     cy.get('.rightclick-action-input-hidden').should('be.visible')
+  //   })
 
   it('shows the nav links on hover', () => {
     cy.get('.dropdown-toggle').trigger('mouseover')
     cy.get('.dropdown-menu').should('be.visible')
   })
 
-//   it('sets and gets a token from local storage', () => {
-//     cy.setLocalStorage('token', token)
-//     cy.getLocalStorage('token').should('eq', token)
-//   })
+  //   it('sets and gets a token from local storage', () => {
+  //     cy.setLocalStorage('token', token)
+  //     cy.getLocalStorage('token').should('eq', token)
+  //   })
 
-//   it('overwites type command using sensitive characters', () => {
-//     cy.visit('/commands/actions')
-//     cy.findByPlaceholderText('Email').type('test@gamil.com')
-//     cy.findByPlaceholderText('Email').type('test@gamil.com', { sensitive: true })
-//   })
+  //   it('overwites type command using sensitive characters', () => {
+  //     cy.visit('/commands/actions')
+  //     cy.findByPlaceholderText('Email').type('test@gamil.com')
+  //     cy.findByPlaceholderText('Email').type('test@gamil.com', { sensitive: true })
+  //   })
 
-//   it('uses fixture data in network request', function () {
-//     cy.visit('/commands/network-requests')
-//     cy.intercept('GET', '**/comments/*', this.data).as('getComment')
-//     cy.get('.network-btn').click()
-//     cy.wait('@getComment').then((res) => {
-//         cy.log('response', res)
-//     })
-//   })
+  //   it('uses fixture data in network request', function () {
+  //     cy.visit('/commands/network-requests')
+  //     cy.intercept('GET', '**/comments/*', this.data).as('getComment')
+  //     cy.get('.network-btn').click()
+  //     cy.wait('@getComment').then((res) => {
+  //         cy.log('response', res)
+  //     })
+  //   })
 
-//   it('pulls data from a fixture', () => {
-//     cy.fixture('example').then((data) => {
-//       cy.log('DATA: ', data)
-//     })
-//   })
+  //   it('pulls data from a fixture', () => {
+  //     cy.fixture('example').then((data) => {
+  //       cy.log('DATA: ', data)
+  //     })
+  //   })
 
-//   it('updates fixture data inline', () => {
-//     cy.fixture('example').then((data) => {
-//         data.email = 'updated@email.com'
-//         cy.log('UPDATED: ', data)
-//     })
-//   })
+  //   it('updates fixture data inline', () => {
+  //     cy.fixture('example').then((data) => {
+  //         data.email = 'updated@email.com'
+  //         cy.log('UPDATED: ', data)
+  //     })
+  //   })
   //   before(() => {
   //     cy.request('https://api.spacexdata.com/v3/missions')
   //       .its('body')
